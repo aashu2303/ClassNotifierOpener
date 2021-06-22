@@ -18,27 +18,17 @@ class Course:
 
 date, time_t = datetime.date.today(), datetime.datetime.now().time()
 day = date.strftime("%A")
-# day = "Monday"
+
 
 print("Starting now")
-# endtime = 0
+
 with open("times.txt", 'r') as file:
     data = file.readlines()
-    # for dt in data:
-    #     stimes = dt.split("\n")[0].split("; ")[1].split(", ")
-    #     for t in stimes:
-    #         if day in t:
-    #             ti = t.split("-")[1][:2]
-    #             if int(ti) > endtime:
-    #                 endtime = int(ti)
-    #     print(stimes)
-    # print(endtime)
+
     while time_t.hour <= 18:
         time_t = datetime.datetime.now().time()
         class_time = time_t.strftime("%X")
-        # print(class_time)
-        # day = "Friday"
-        # class_time = "09:00:00"
+
         for dt in data:
             name, starttimes, link, status = (dt.split("\n")[0]).split("; ")
             course_tmp = Course(name=name, starttimes=starttimes, link=link, status=status)
@@ -56,8 +46,7 @@ with open("times.txt", 'r') as file:
                         )
                         webbrowser.open(course_tmp.link[index % len(course_tmp.link)])
                         time.sleep(60*59 + 58)
-                        # time.sleep(5)
-                        # exit(0)
+
         time.sleep(0.5)
     print("Ending the process")
 
