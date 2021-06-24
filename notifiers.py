@@ -25,7 +25,7 @@ print("Starting now")
 with open("times.txt", 'r') as file:
     data = file.readlines()
 
-    while time_t.hour <= 18:
+    while time_t.hour < 18:
         time_t = datetime.datetime.now().time()
         class_time = time_t.strftime("%X")
 
