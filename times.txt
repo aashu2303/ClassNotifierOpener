@@ -1,7 +1,7 @@
 Differential Equations; Monday-09:00:00, Wednesday-11:00:00, Thursday-10:00:00; https://iith.webex.com/iith/j.php?MTID=mdcd7957d51a50abba9fcadc07e366f0b; NOT_ACTIVE
 Vector Calculus; Monday-10:00:00, Wednesday-09:00:00, Thursday-11:00:00; https://meet.google.com/rfc-dujg-zvj, https://meet.google.com/iap-msin-jvy, https://meet.google.com/jug-rxui-ssn; NOT_ACTIVE
-Digital Systems; Tuesday-10:00:00, Thursday-12:00:00, Friday-09:00:00; https://meet.google.com/lookup/dd6pq5oqxz?authuser=0&hs=179; ACTIVE
-Electrical Circuits Lab; Monday-16:00:00, Thursday-14:30:00; https://meet.google.com/lookup/ejwrw3geso?authuser=0&hs=179; ACTIVE
-Signals and Systems; Monday-14:30:00, Thursday-16:00:00; https://iithyderabad.webex.com/meet/abhinavkumar; ACTIVE
-Digital Fabrication Tutorial; Wednesday-14:00:00; https://iith.webex.com/iith/j.php?MTID=md1bf7899e7047552790e02100708a0a9; ACTIVE
-Digital Fabrication; Wednesday-16:00:00; https://iith.webex.com/iith/j.php?MTID=m0b5c07568392e9dd4c990b8ab7e57070; ACTIVE
+Digital Systems; Tuesday-10:00:00, Thursday-12:00:00, Friday-09:00:00; https://meet.google.com/lookup/dd6pq5oqxz?authuser=0&hs=179; NOT_ACTIVE
+Electrical Circuits Lab; Monday-16:00:00, Thursday-14:30:00; https://meet.google.com/lookup/ejwrw3geso?authuser=0&hs=179; NOT_ACTIVE
+Signals and Systems; Monday-14:30:00, Thursday-16:00:00; https://iithyderabad.webex.com/meet/abhinavkumar; NOT_ACTIVE
+Digital Fabrication Tutorial; Wednesday-14:00:00; https://iith.webex.com/iith/j.php?MTID=md1bf7899e7047552790e02100708a0a9; NOT_ACTIVE
+Digital Fabrication; Wednesday-16:00:00; https://iith.webex.com/iith/j.php?MTID=m0b5c07568392e9dd4c990b8ab7e57070; NOT_ACTIVE
