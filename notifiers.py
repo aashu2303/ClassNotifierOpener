@@ -18,14 +18,14 @@ class Course:
 
 date, time_t = datetime.date.today(), datetime.datetime.now().time()
 day = date.strftime("%A")
-
+endtime = 18
 
 print("Starting now")
 
 with open("times.txt", 'r') as file:
     data = file.readlines()
 
-    while time_t.hour < 18:
+    while time_t.hour < endtime:
         time_t = datetime.datetime.now().time()
         class_time = time_t.strftime("%X")
 
@@ -44,8 +44,11 @@ with open("times.txt", 'r') as file:
                             app_name="Reminder",
                             timeout=1
                         )
-                        webbrowser.open(course_tmp.link[index % len(course_tmp.link)])
-                        time.sleep(60*59 + 58)
+                        try:
+                            webbrowser.open(course_tmp.link[index % len(course_tmp.link)])
+                            time.sleep(60*59 + 58)
+                        except Exception:
+                            print("Couldn't open the class")
 
         time.sleep(0.5)
     print("Ending the process")
