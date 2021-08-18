@@ -37,7 +37,7 @@ Answer: Run the command `pip install --upgrade pip` and ignore if any error or w
   
 ## Support
 
-For support, email chenchetyabhishek@gmail.com and 
+For support, email chenchetyabhishek@gmail.com and aaseesh.rallapalli@gmail.com
 
   
 ## Contributing
