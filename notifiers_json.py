@@ -27,7 +27,8 @@ def getEndTime(data, day):
     for dat in data:
         for d in dat['times']:
             if day in d:
-                times_data.append((datetime.datetime.strptime(d.split("-")[-1], "%H:%M").time().hour + 1) % 24)
+                if dat["status"]:
+                    times_data.append((datetime.datetime.strptime(d.split("-")[-1], "%H:%M").time().hour + 1) % 24)
     return max(times_data)
 
 def getStartTime(data, day):
@@ -35,14 +36,15 @@ def getStartTime(data, day):
     for dat in data:
         for d in dat['times']:
             if day in d:
-                times_data.append((datetime.datetime.strptime(d.split("-")[-1], "%H:%M").time().hour) % 24)
+                if dat['status']:
+                    times_data.append((datetime.datetime.strptime(d.split("-")[-1], "%H:%M").time().hour) % 24)
     return min(times_data)
 
 def NextWorkingDay(today, data):
     today += timedelta(1)
     while True:
         if isHoliday(data=data, date=today):
-            today += timedelta
+            today += timedelta(1)
         else:
             break
     return f"{today.strftime('%d')} {today.strftime('%b')}"
@@ -51,8 +53,6 @@ with open("times.json") as file:
     DATA = json.load(file)
 data = DATA["classtimes"]
 holiday_data = DATA["holidays"]
-ENDTIME = getEndTime(data, day)
-STARTTIME = getStartTime(data, day)
 
 print("Program has started")
 
@@ -61,7 +61,9 @@ if date in holiday_data.keys():
 elif day == "Saturday" or day == "Sunday":
     print(f"Sir, today is a weekend. You don't have any classes today")
 else:
-    while STARTTIME <= datetime.datetime.now().time().hour < ENDTIME:
+    ENDTIME = getEndTime(data, day)
+    STARTTIME = getStartTime(data, day)
+    while datetime.datetime.now().time().hour < ENDTIME:
         now = datetime.datetime.now().time().strftime("%X")[0:5]
         day = datetime.date.today().strftime("%A")
         date = f"{int(today.day)}-{int(today.month)}-{int(today.year)}"
@@ -77,7 +79,7 @@ else:
                             title="CLASS NOW",
                             message=f"Please join the {dt['name']} class via the opened link ASAP",
                             app_icon=None,
-                            timeout=5,
+                            timeout=5,      
                             toast=True
                         )
                         webbrowser.open_new_tab(dt['link'])
